@@ -1,0 +1,9 @@
+#!/bin/bash
+DATE="$(date +"%d-%m-%Y")"
+for run in {1..10}
+do
+touch /opt/45_46_morning/anna/taskANNA/$run.$DATE.txt
+done
+
+Crontab:
+*/15 * * * * /opt/45_46_morning/anna/taskANNA.sh
